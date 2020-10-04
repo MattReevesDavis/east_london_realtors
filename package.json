@@ -1,0 +1,19 @@
+{
+  "name": "east_london_realtors",
+  "version": "1.0.0",
+  "description": "Website for East London Realtors",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass scss/main.scss public/css/style.css -w"
+  },
+  "author": "Matthew Reeves Davis",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "node-sass": "^4.14.1",
+    "nodemailer": "^6.4.11",
+    "nodemailer-mailgun-transport": "^2.0.0"
+  }
+}

@@ -1,0 +1,54 @@
+// Utility Container
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+
+    @media only screen and (max-width: $bpLargest) {
+        padding: 0;
+    }
+}
+
+// Headers
+
+.header-1 {
+    font-size: 8rem;
+    font-weight: 300;
+    letter-spacing: 1rem;
+
+    &--primary {
+        color: $primaryColour;
+    }
+}
+
+.header-2 {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+.header-3 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.header-4 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+// Margins
+
+.mt-lg { margin-top: 4rem; }
+.mt-md { margin-top: 2rem; }
+.mt-sm { margin-top: 1.5rem;}
+
+// Text
+
+.primary-text { color: $primaryColour; }
+
+// Hide Element
+
+.hide-element { display: none; }
+
+.transform-menu-show { transform: translateY(0); }

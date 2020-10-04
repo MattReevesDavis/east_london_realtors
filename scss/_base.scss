@@ -1,0 +1,36 @@
+// Colour Variable
+$primaryColour: #ffde32;
+$darkColour: #333;
+$lightColour: #fff;
+
+// Font Stacks
+$primaryFontStack: 'Jost', sans-serif;
+$secondaryFontStack: 'Roboto', sans-serif;
+$serifFontStack: 'Roboto Mono', serif;
+
+// Media Query Breakpoints
+$bpLargest: 75em;  //1200px
+$bpLarge: 62.5em;  //1000px
+$bpMedium: 48em;   //768px
+$bpSmall: 37.5em;  //600px
+$bpSmallest: 28.125em; //450px
+
+// CSS Reset
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $primaryFontStack;
+    color: $lightColour;
+    line-height: 1.6;
+}

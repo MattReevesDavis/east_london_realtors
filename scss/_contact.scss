@@ -1,0 +1,227 @@
+.contact {
+    background-color: $lightColour;
+    padding: 12rem 0;
+
+    @media only screen and (max-width: $bpLargest) {
+        padding: 12rem 5rem;
+    }
+
+    @media only screen and (max-width: $bpLarge) {
+        padding: 10rem 5rem;
+    }
+
+    @media only screen and (max-width: $bpMedium) {
+        padding: 8rem 5rem;
+    }
+
+    @media only screen and (max-width: $bpSmall) {
+        padding: 8rem 3rem;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @media only screen and (max-width: $bpMedium) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        color: $darkColour;
+        width: 50%;
+        padding-right: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media only screen and (max-width: $bpMedium) {
+            width: 100%;
+            padding: 0;
+        }
+
+        &-header {
+            font-size: 4rem;
+            color: $darkColour;
+        }
+    }
+
+    &__info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 3rem;
+
+        @media only screen and (max-width: $bpMedium) {
+            width: 100%;
+            margin: 0;
+            margin-top: 3rem;
+        }
+    }
+
+    &__method {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem 0;
+
+        @media only screen and (max-width: $bpMedium) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 3rem 0 0;
+            padding: 0;
+        }
+    }
+
+    &__svg {
+        padding: 3rem;
+        background-color: $darkColour;
+        display: inline-block;
+        border-radius: 50%;
+        // border: 1px solid $darkColour;
+        margin-right: 2rem;
+
+        @media only screen and (max-width: $bpLarge) {
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            padding: 3rem;
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        fill: $primaryColour;
+
+        @media only screen and (max-width: $bpLarge) {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        color: $darkColour;
+
+        @media only screen and (max-width: $bpLargest) {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bpSmallest) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            color: $darkColour;
+            transition: all .3s;
+        }
+
+        &:hover,
+        &:active {
+            text-decoration: none;
+            background-color: $primaryColour;
+        }
+    }
+
+    &__form {
+
+        &-label {
+            display: block;
+            margin: 1rem 0 .5rem;
+            font-size: 1.8rem;
+        }
+
+        &-input {
+            width: 100%;
+            padding: .5rem;
+            height: 4rem;
+            border: 1px solid lighten($darkColour, 50%);
+            font-family: inherit;
+            font-size: 1.5rem;
+
+            &:focus {
+                outline-color: $primaryColour;
+            }
+        }
+
+        &-btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-size: 1.8rem;
+            font-family: $primaryFontStack;
+            color: $darkColour;
+            border: 1px solid $darkColour;
+            background-color: transparent;
+            transition: all .3s;
+            outline: none;
+
+            &:hover {
+                background-color: $primaryColour;
+                border: 1px solid $primaryColour;
+            }
+        }
+
+        &-validation-error {
+            font-size: 1.5rem;
+            color: #cc0000;
+            display: none;
+        }
+
+    }
+
+    &__submit {
+
+        display: flex;
+        margin-top: 3rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.email {
+
+    &__success,
+    &__fail {
+        font-size: 1.5rem;
+        width: 50%;
+        padding: 1rem;
+        border-radius: .2rem;
+        display: none;
+
+        @media only screen and (max-width: $bpLarge) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__success {
+        background-color: rgba(69, 182, 69, 0.37);
+        color: green;
+    }
+
+    &__fail {
+        background-color: #d838385d;
+        color: #cc0000;
+    }
+}

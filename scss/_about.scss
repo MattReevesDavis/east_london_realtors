@@ -1,0 +1,67 @@
+.about {
+    background-color: $primaryColour;
+    padding: 8rem 0;
+    font-weight: 300;
+
+    &__header {
+        font-size: 5rem;
+        color: $darkColour;
+    }
+
+    @media only screen and (max-width: $bpLargest) {
+        padding: 8rem 5rem;
+    }
+
+    @media only screen and (max-width: $bpLarge) {
+        padding: 8rem 5rem;
+    }
+
+    @media only screen and (max-width: $bpMedium) {
+        padding: 6rem 5rem;
+    }
+
+    @media only screen and (max-width: $bpSmall) {
+        padding: 6rem 3rem;
+    }
+
+    &__text {
+        font-size: 2.5rem;
+        color: $darkColour;
+
+        @media only screen and (max-width: $bpLarge) {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__list {
+        // list-style: none;
+        font-size: 2.5rem;
+        color: $darkColour;
+        font-weight: 400;
+        margin-left: 3rem;
+
+        @media only screen and (max-width: $bpLarge) {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__link:visited,
+    &__link:link {
+        color: $darkColour;
+        transition: all .4s;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: transparent;
+            transform: translateY(-1px);
+        }
+    }
+}

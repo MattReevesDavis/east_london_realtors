@@ -1,0 +1,281 @@
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba($darkColour, .9), rgba($darkColour, .9)), url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__header {
+        font-size: 8rem;
+        font-weight: 300;
+        letter-spacing: 1rem;
+        color: $primaryColour;
+
+        @media only screen and (max-width: $bpLarge) {
+            font-size: 6rem;
+            letter-spacing: .8rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            font-size: 5rem;
+        }
+
+        @media only screen and (max-width: $bpSmall) {
+            font-size: 4rem;
+        }
+    }
+
+    &__subheader {
+        font-size: 2.5rem;
+        font-weight: 300;
+
+        @media only screen and (max-width: $bpLarge) {
+            font-size: 2.5rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bpSmall) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__btn {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: 300;
+            padding: 1rem 3rem;
+            border: 1px solid $primaryColour;
+            background-color: transparent;
+            color: $primaryColour;
+            text-decoration: none;
+            transition: all .3s;
+
+            @media only screen and (max-width: $bpMedium) {
+                font-size: 1.5rem;
+                padding: .8rem 2.5rem;
+                margin-top: 2.2rem;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-color: $primaryColour;
+            color: $darkColour;
+        }
+    }
+}
+
+.navbar {
+    height: 10rem;
+    // background-color: rgba($darkColour, .99);
+    background-color: $darkColour;
+    color: $lightColour;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+
+    @media only screen and (max-width: $bpLarge) {
+        height: 8rem;
+    }
+
+    @media only screen and (max-width: $bpMedium) {
+        height: 6rem;
+    }
+
+    @media only screen and (max-width: $bpSmall) {
+        justify-content: flex-end;
+    }
+    
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2.2rem;
+        justify-content: space-between;
+        align-items: flex-end;
+        cursor: pointer;
+        display: none;
+
+        &-line-1 {
+            height: 2px;
+            width: 3rem;
+            background-color: $primaryColour;
+        }
+
+        &-line-2 {
+            height: 2px;
+            width: 2rem;
+            background-color: $primaryColour;
+            transition: all .5s;
+        }
+
+        &-line-3 {
+            height: 2px;
+            width: 1rem;
+            background-color: $primaryColour;
+            transition: all .5s;
+        }
+
+        @media only screen and (max-width: $bpSmall) {
+            display: flex;
+        }
+
+        &:hover &-line-2,
+        &:hover &-line-3 {
+            width: 3rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        @media only screen and (max-width: $bpSmall) {
+            display: none;
+        }
+    }
+
+    
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            padding: 2rem 4rem;
+            font-size: 2.5rem;
+            color: $lightColour;
+            font-weight: 300;
+            transition: all .3s;
+
+            @media only screen and (max-width: $bpLarge) {
+                font-size: 2rem;
+            }
+
+            @media only screen and (max-width: $bpMedium) {
+                font-size: 1.8rem;
+                padding: 2rem 3rem;
+            }
+        }
+
+        &:hover,
+        &:active {
+            color: $primaryColour;
+            transform: translateY(-2px);
+        }
+    }
+
+    &__logo {
+        width: 6rem;
+
+        @media only screen and (max-width: $bpLarge) {
+            width: 5rem;
+        }
+
+        @media only screen and (max-width: $bpMedium) {
+            width: 4rem;
+        }
+    }
+}
+
+// Claim Number: 20/802/00121
+// Phone Number: 011 889 8200 - Ally
+
+// allyw@mcb-claims.co.za Claim Number in Subject
+
+.top { background-color: transparent; }
+
+.respnavbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // z-index: -1;
+    transition: all .5s;
+    transform: translateY(-100%);
+    background-color: rgba($darkColour, .95);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+
+    &__close {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        top: 2rem;
+        right: 2rem;
+        transition: all .2s;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 1.5rem;
+            height: 2px;
+            width: 100%;
+            background-color: $primaryColour;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__logo {
+        width: 6rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 2rem 0;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            padding: 1.5rem 0;
+            font-size: 2rem;
+            color: $lightColour;
+            font-weight: 300;
+            transition: all .3s;
+        }
+
+        &:hover,
+        &:active {
+            color: $primaryColour;
+            transform: translateY(-2px);
+        }
+    }
+}
